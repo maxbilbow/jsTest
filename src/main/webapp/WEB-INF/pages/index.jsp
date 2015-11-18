@@ -25,7 +25,11 @@
     jQuery('.foo')
             .addClass('bar')
             .fadeIn('slow')
-            .html('Hello World');
+            .html('<p>' +
+                    'Hello World<br/>' +
+                    '<a href="timers">Timer Stuff</a> |' +
+                    '<a href="mods">Async Modules</a> '+
+                    '</p>');
 
     (function() {
         var html = '';

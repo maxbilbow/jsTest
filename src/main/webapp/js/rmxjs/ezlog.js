@@ -2,7 +2,10 @@
  * Created by bilbowm on 18/11/2015.
  */
 
-(function () {
+
+
+//(function () {
+define(['jquery'], function($) {
     /**
      * Simple print function for quick debugging.
      * It will use console.log() to output "msg: result"
@@ -33,7 +36,7 @@
      * Some useful text formatting tools.
      * @type {{print: ezPrint, h0: module.exports.h0, h1: module.exports.h1, h2: module.exports.h2, h3: module.exports.h3, h4: module.exports.h4, br: module.exports.br}}
      */
-    module.exports = {
+    return {
         print: ezPrint,
         h0: function (header) {
             hr(header, "><><><><><><><><><><")
@@ -54,4 +57,5 @@
             lineBreak(header)
         }
     };
-})();
+});
+

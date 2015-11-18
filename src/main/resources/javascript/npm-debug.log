@@ -1,0 +1,72 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\ide\\drivers\\node.exe',
+1 verbose cli   'C:\\ide\\drivers\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'jquery' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose install initial load of C:\ide\projects\jsTests\package.json
+5 warn package.json jsTests@1.0.0 No repository field.
+6 warn package.json jsTests@1.0.0 No README data
+7 warn package.json jsTests@1.0.0 No license field.
+8 verbose installManyTop reading scoped package data from C:\ide\projects\jsTests\node_modules\amqplib\package.json
+9 verbose installManyTop reading scoped package data from C:\ide\projects\jsTests\node_modules\grunt\package.json
+10 verbose installManyTop reading scoped package data from C:\ide\projects\jsTests\node_modules\grunt-cli\package.json
+11 verbose installManyTop reading scoped package data from C:\ide\projects\jsTests\node_modules\grunt-contrib-jshint\package.json
+12 info package.json grunt@0.4.5 No license field.
+13 info package.json grunt-cli@0.1.13 No license field.
+14 info package.json grunt-contrib-jshint@0.10.0 No license field.
+15 verbose readDependencies loading dependencies from C:\ide\projects\jsTests\package.json
+16 silly cache add args [ 'jquery@~2.1.0', null ]
+17 verbose cache add spec jquery@~2.1.0
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'jquery@~2.1.0',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'jquery',
+18 silly cache add   rawSpec: '~2.1.0',
+18 silly cache add   spec: '>=2.1.0 <2.2.0',
+18 silly cache add   type: 'range' }
+19 silly addNamed jquery@>=2.1.0 <2.2.0
+20 verbose addNamed ">=2.1.0 <2.2.0" is a valid semver range for jquery
+21 silly addNameRange { name: 'jquery', range: '>=2.1.0 <2.2.0', hasData: false }
+22 silly mapToRegistry name jquery
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/jquery
+26 verbose addNameRange registry:https://registry.npmjs.org/jquery not in flight; fetching
+27 verbose request uri https://registry.npmjs.org/jquery
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 10:09:56 AM
+30 verbose request id b9b00268fd7d9a11
+31 http request GET https://registry.npmjs.org/jquery
+32 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:8082
+33 info attempt registry request try #2 at 10:10:07 AM
+34 http request GET https://registry.npmjs.org/jquery
+35 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:8082
+36 info attempt registry request try #3 at 10:11:08 AM
+37 http request GET https://registry.npmjs.org/jquery
+38 verbose stack Error: tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:8082
+38 verbose stack     at ClientRequest.onError (C:\ide\drivers\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:174:17)
+38 verbose stack     at ClientRequest.g (events.js:260:16)
+38 verbose stack     at emitOne (events.js:77:13)
+38 verbose stack     at ClientRequest.emit (events.js:169:7)
+38 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:259:9)
+38 verbose stack     at emitOne (events.js:77:13)
+38 verbose stack     at TLSSocket.emit (events.js:169:7)
+38 verbose stack     at emitErrorNT (net.js:1253:8)
+38 verbose stack     at doNTCallback2 (node.js:439:9)
+38 verbose stack     at process._tickCallback (node.js:353:17)
+39 verbose cwd C:\ide\projects\jsTests\src\main\resources\javascript
+40 error Windows_NT 6.1.7601
+41 error argv "C:\\ide\\drivers\\node.exe" "C:\\ide\\drivers\\node_modules\\npm\\bin\\npm-cli.js" "install" "jquery"
+42 error node v4.2.1
+43 error npm  v2.14.7
+44 error code ECONNRESET
+45 error network tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:8082
+45 error network This is most likely not a problem with npm itself
+45 error network and is related to network connectivity.
+45 error network In most cases you are behind a proxy or have bad network settings.
+45 error network
+45 error network If you are behind a proxy, please make sure that the
+45 error network 'proxy' config is set properly.  See: 'npm help config'
+46 verbose exit [ 1, true ]

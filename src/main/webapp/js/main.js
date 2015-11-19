@@ -3,7 +3,7 @@
  */
 
 
-require(['jquery', 'modules/api', 'rmxjs/ezlog'], function($,api,p){
+require(['jquery', 'rmxjs/ezlog'], function($,p){
     // Initialize with your OAuth.io app public key
 
     $(document).ready(function () {
@@ -13,12 +13,7 @@ require(['jquery', 'modules/api', 'rmxjs/ezlog'], function($,api,p){
             var user = $(this).find('input').val();
             var el = $('.bar ul').empty(),lis = [];
             try {
-                api.timeline(user,10, function (tweets) {
-                        for (var i = 0, il = tweets.length; i < il; i++) {
-                            lis.push($('<li><strong>@' + user + '</strong>: ' + tweets[i].text + '</li>'));
-                        }
-
-                    });
+                lis.push($('<li><strong>@' + user + '</strong>: ' + tweets[i].text + '</li>'));
             } catch (e) {
                 lis.push($('<li><strong>@' + user + '</strong>: '+e+'</li>'));
             }

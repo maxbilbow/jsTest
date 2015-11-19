@@ -15,6 +15,16 @@
             /*display: inline;*/
             min-width: 100px;
         }
+        .event-box {
+            background-color: lightblue;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            vertical-align: middle;
+            padding:15px;
+            margin-left: 5px;
+            margin-right: 5px;;
+        }
     </style>
 </head>
 <body>
@@ -35,12 +45,30 @@
 
     </ul>
 </div>
+
+
+<div class="pub-sub">
+    <h2>Pub Sub</h2>
+    <ul>
+
+    </ul>
+
+</div>
+<div class="event-box-box">
+    <h2>Event Box</h2>
+<div class="event-box">
+
+</div>
+    </div>
 <script data-main="/js/main" src="/js/requirejs.js"></script>
 <script src="/js/jquery-2.1.4.js"></script>
 <script type="application/javascript">
-//var p = require('rmxjs/ezlog');
-//
-//p.print("IT WORKED!");
+
+    require(['rmxjs/ezlog', 'modules/pubsub'], function(rmx, PubSub){
+        rmx.print("It WOrked again!");
+//        alert(PubSub);
+
+    });
 
 
 </script>

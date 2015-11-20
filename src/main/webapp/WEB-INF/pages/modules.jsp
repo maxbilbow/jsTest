@@ -15,20 +15,42 @@
             /*display: inline;*/
             min-width: 100px;
         }
+
         .event-box {
             background-color: lightblue;
-            height: 100px;
-            width: 100px;
+            min-height: 150px;
+            min-width: 150px;
             text-align: center;
             vertical-align: middle;
-            padding:15px;
+            padding: 15px;
             margin-left: 5px;
             margin-right: 5px;;
+        }
+        .event-box textarea {
+            height: 100px;
+            width: 100%;
+            vertical-align: baseline;
         }
     </style>
 </head>
 <body>
 <h1>MODULES!</h1>
+
+
+<div class="event-record">
+    <h2>Events</h2>
+    <ul>
+
+    </ul>
+
+</div>
+<div class="event-box-box">
+    <h2>Event Box</h2>
+    <div class="event-box">
+<p></p>
+        <textarea></textarea>
+    </div>
+</div>
 
 <div class="foo">
     <h2>FOO</h2>
@@ -37,37 +59,23 @@
         <input name="user" value="maxbilbow">
         <input type="submit" value="Go">
     </form>
-</div>
+    <div class="bar">
+        <h2>BAR</h2>
+        <ul>
 
-<div class="bar">
-  <h2>BAR</h2>
-    <ul>
-
-    </ul>
-</div>
-
-
-<div class="pub-sub">
-    <h2>Pub Sub</h2>
-    <ul>
-
-    </ul>
-
-</div>
-<div class="event-box-box">
-    <h2>Event Box</h2>
-<div class="event-box">
-
-</div>
+        </ul>
     </div>
-<script data-main="/js/main" src="/js/requirejs.js"></script>
+</div>
+
+
+
+<script data-main="/js/main" src="/js/require.js"></script>
 <script src="/js/jquery-2.1.4.js"></script>
 <script type="application/javascript">
 
-    require(['rmxjs/ezlog', 'modules/pubsub'], function(rmx, PubSub){
-        rmx.print("It WOrked again!");
-//        alert(PubSub);
-
+    require(['modules/api']);
+    require(['modules/pubsub'], function(ps){
+        ps.pub("PubSub!");
     });
 
 

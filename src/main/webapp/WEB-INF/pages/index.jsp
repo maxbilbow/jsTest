@@ -28,7 +28,8 @@
             .html('<p>' +
                     'Hello World<br/>' +
                     '<a href="timers">Timer Stuff</a> |' +
-                    '<a href="mods">Async Modules</a> '+
+                    '<a href="mods">Async Modules</a> |'+
+                    '<a href="pubsub">Pub Sub</a> '+
                     '</p>');
 
     (function() {

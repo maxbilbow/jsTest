@@ -1,6 +1,6 @@
 
 
-define(function() {
+define(['jquery','./pubsub'],function($,pubsub) {
     $(document).ready(function(){
         var events = {
             click:0,
@@ -28,6 +28,7 @@ define(function() {
                 if (callback)
                     callback(evt);
                 events[event]++;
+                pubsub.pub('pubsub-'+event,evt);
                 $('.event-record ul li#'+event).html(event + ': ' + events[event]);
             });
         }
@@ -59,4 +60,4 @@ define(function() {
     });
 
     return "Hello!";
-});
+});//.done(function(){console.log("DONE")});

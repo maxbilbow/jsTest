@@ -14,6 +14,8 @@
             float: left;
             /*display: inline;*/
             min-width: 100px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         .event-box {
@@ -23,7 +25,7 @@
             text-align: center;
             vertical-align: middle;
             padding: 15px;
-            margin-left: 5px;
+
             margin-right: 5px;;
         }
         .event-box textarea {
@@ -67,15 +69,26 @@
     </div>
 </div>
 
+<div class="pub-sub">
+    <h2>Pub Sub</h2>
+    <p>Mouse: <b></b></p>
 
+</div>
 
 <script data-main="/js/main" src="/js/require.js"></script>
 <script src="/js/jquery-2.1.4.js"></script>
 <script type="application/javascript">
 
-    require(['modules/api']);
-    require(['modules/pubsub'], function(ps){
-        ps.pub("PubSub!");
+    require(['rmxjs/api']);
+    require(['jquery','rmxjs/pubsub'], function($,ps){
+       ps.sub('pubsub-mousemove',function(evt){
+
+          $('.pub-sub p b').html(evt.pageX + ', ' + evt.pageY);
+       });
+
+        ps.sub('pubsub-dblclick',function(evt) {
+           $('.pub-sub').toggle();
+        });
     });
 
 
